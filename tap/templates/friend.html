@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$BLAZE</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="manifest" href="{% static 'json/manifest.json' %}">
+    <meta name="theme-color" content="#ff9800">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="friends-container">
+        <h1 class="friends-title">👥 Friends</h1>
+        <button class="invite-button">Invite a Friend</button>
+        <p class="reward-text">5 000 000 $BLZ per invited friend</p>
+        <div class="invited-friends-box">
+            <p class="no-friends">You have no Friends 😢</p>
+        </div>
+    </div>
+    <div class="buttons">
+        <button onclick="location.href='{% url 'boost' %}'" id="boost-btn">⚡ Boost</button>
+        <button onclick="location.href='{% url 'task' %}'" id="tasks-btn">📋 Tasks</button>
+        <button onclick="location.href='{% url 'home' %}'">🏠︎ Home</button>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
