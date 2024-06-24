@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$BLAZE</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="manifest" href="{% static 'json/manifest.json' %}">
+    <meta name="theme-color" content="#ff9800">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <div class="boost-container">
+    <h1 class="boost-title">🚀Boosts</h1>
+
+    <div class="boost-box">
+        <div class="boost-item" data-boost="multitap">
+            <div class="boost-content">
+                <span class="boost-icon">🖐</span>
+                <div class="boost-details">
+                    <h3>Multitap</h3>
+                    <p class="boost-price">1000 $BLZ</p>
+                    <p class="boost-level">Level 1</p>
+                    <button class="get-boost-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="boost-item" data-boost="energy-limit">
+            <div class="boost-content">
+                <span class="boost-icon">🔋</span>
+                <div class="boost-details">
+                    <h3>Energy Limit</h3>
+                    <p class="boost-price">2000 $BLZ</p>
+                    <p class="boost-level">Level 1</p>
+                    <button class="get-boost-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="boost-item" data-boost="recharge-speed">
+            <div class="boost-content">
+                <span class="boost-icon">🔄</span>
+                <div class="boost-details">
+                    <h3>Recharge Speed</h3>
+                    <p class="boost-price">3000 $BLZ</p>
+                    <p class="boost-level">Level 1</p>
+                    <button class="get-boost-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more boost items here as needed -->
+    </div>
+       <div class="buttons">
+        <button onclick="location.href='{% url 'friends' %}'" id="friends-btn">👥 Friends</button>
+        <button onclick="location.href='{% url 'task' %}'" id="tasks-btn">📋 Tasks</button>
+           <button onclick="location.href='{% url 'home' %}'">🏠︎ Home</button>
+    </div>
+
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

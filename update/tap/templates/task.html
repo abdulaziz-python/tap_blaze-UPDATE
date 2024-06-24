@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$BLAZE</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="manifest" href="{% static 'json/manifest.json' %}">
+    <meta name="theme-color" content="#ff9800">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Tasks</h1>
+        </header>
+        <div class="task-container">
+            <div class="task-box special-task">
+                <h2>Special Tasks</h2>
+                <div class="task">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Icon" width="50">
+                    <div class="task-details">
+                        <p class="task-name">Join Community</p>
+                        <p class="task-prize">1,000,000 $BLZ</p>
+                        <a href="https://t.me/blazetoken_Community" target="_blank" class="task-button">></a>
+                    </div>
+                </div>
+                <div class="task">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" width="50">
+                    <div class="task-details">
+                        <p class="task-name">Like and Follow</p>
+                        <p class="task-prize">1,000,000 $BLZ</p>
+                        <a href="https://www.instagram.com/" target="_blank" class="task-button">></a> <!-- Placeholder link -->
+                    </div>
+                </div>
+            </div>
+            <div class="task-box normal-task">
+                <h2>Normal Tasks</h2>
+                <div class="task">
+                    <img src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png" alt="YouTube Icon" width="50">
+                    <div class="task-details">
+                        <p class="task-name">Watch a video</p>
+                        <p class="task-prize">700,000 $BLZ</p>
+                        <a href="https://youtube.com" target="_blank" class="task-button">></a> <!-- Placeholder link -->
+                    </div>
+                </div>
+                <div class="task">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png" alt="Minecraft Icon" width="50">
+                    <div class="task-details">
+                        <p class="task-name">Play a game</p>
+                        <p class="task-prize">800,000 $BLZ</p>
+                        <a href="https://minecraft.net" target="_blank" class="task-button">></a> <!-- Placeholder link -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="location.href='{% url 'friends' %}'" id="friends-btn">👥 Friends</button>
+            <button onclick="location.href='{% url 'boost' %}'" id="boost-btn">⚡ Boost</button>
+            <button onclick="location.href='{% url 'home' %}'">🏠︎ Home</button>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
